@@ -209,15 +209,47 @@ Add activity aliases for each alternate icon. The plugin automatically discovers
 
 #### 2. Create Icon Resources
 
-For each alternate icon, create icon files in all density folders:
+For each alternate icon, create icon files in all density folders. You must provide icons for all density variants:
 
-- `mipmap-mdpi/ic_launcher_dark.png`
-- `mipmap-hdpi/ic_launcher_dark.png`
-- `mipmap-xhdpi/ic_launcher_dark.png`
-- `mipmap-xxhdpi/ic_launcher_dark.png`
-- `mipmap-xxxhdpi/ic_launcher_dark.png`
+1. Navigate to your Android app's `res` directory (e.g., `android/app/src/main/res/`)
 
-**Note:** Replace `dark` with your icon name and ensure all density variants are provided.
+2. For each alternate icon, create icon files in all density folders:
+   - `mipmap-mdpi/ic_launcher_{iconName}.png`
+   - `mipmap-hdpi/ic_launcher_{iconName}.png`
+   - `mipmap-xhdpi/ic_launcher_{iconName}.png`
+   - `mipmap-xxhdpi/ic_launcher_{iconName}.png`
+   - `mipmap-xxxhdpi/ic_launcher_{iconName}.png`
+
+3. Example structure for multiple icons:
+   ```
+   res/
+     mipmap-mdpi/
+       ic_launcher.png          (default icon - required)
+       ic_launcher_dark.png     (alternate icon)
+       ic_launcher_light.png    (alternate icon)
+     mipmap-hdpi/
+       ic_launcher.png
+       ic_launcher_dark.png
+       ic_launcher_light.png
+     mipmap-xhdpi/
+       ic_launcher.png
+       ic_launcher_dark.png
+       ic_launcher_light.png
+     mipmap-xxhdpi/
+       ic_launcher.png
+       ic_launcher_dark.png
+       ic_launcher_light.png
+     mipmap-xxxhdpi/
+       ic_launcher.png
+       ic_launcher_dark.png
+       ic_launcher_light.png
+   ```
+
+**Important:** 
+- Replace `{iconName}` with your actual icon name (e.g., `dark`, `light`, `holiday`)
+- The icon name in the filename must match the name used in the `activity-alias` in `AndroidManifest.xml`
+- Ensure all density variants are provided for each icon
+- The default icon (`ic_launcher.png`) is required and should be present in all density folders
 
 ---
 
