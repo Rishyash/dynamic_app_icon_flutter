@@ -2,6 +2,21 @@
 
 A Flutter plugin for dynamically changing app icons on Android and iOS.
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/images/android.gif" alt="Android Demo" width="300"/>
+      <br />
+      <strong>Android</strong>
+    </td>
+    <td align="center">
+      <img src="assets/images/ios.gif" alt="iOS Demo" width="300"/>
+      <br />
+      <strong>iOS</strong>
+    </td>
+  </tr>
+</table>
+
 ## Features 🌟
 
 - 🎨 **Android Support**: Change app icons using activity aliases
