@@ -225,7 +225,7 @@ For each alternate icon, create icon files in all density folders:
 
 #### Configure Info.plist
 
-Add alternate icons configuration to your `Info.plist`:
+Add alternate icons configuration to your `Info.plist`. **Important:** You must include both the alternate icons (`CFBundleAlternateIcons`) and the default/primary icon (`CFBundlePrimaryIcon`) configuration:
 
 ```xml
 	<key>CFBundleIcons</key>
@@ -296,22 +296,24 @@ Add alternate icons configuration to your `Info.plist`:
 </dict>
 ```
 
+**Note:** The `CFBundlePrimaryIcon` configuration for the default icon is **required**. Make sure to include it in both `CFBundleIcons` (for iPhone) and `CFBundleIcons~ipad` (for iPad) sections. The default icon name should match the icon files you place in the `App Icon` folder (e.g., `default@2x.png` and `default@3x.png`).
+
 #### Add Icon Assets
 
 1. Open your project in Xcode
 2. Create an `App Icon` folder in your `Runner` directory (e.g., `ios/Runner/App Icon/`)
-3. Add icon image files for each alternate icon with the following naming convention:
+3. Add icon image files for each icon (including the **required** default icon) with the following naming convention:
    - For each icon name (e.g., `dark`, `light`, `default`), add:
      - `{iconName}@2x.png` (120x120 pixels for iPhone)
      - `{iconName}@3x.png` (180x180 pixels for iPhone)
    
-   Example files:
-   - `dark@2x.png`
-   - `dark@3x.png`
-   - `light@2x.png`
-   - `light@3x.png`
-   - `default@2x.png`
-   - `default@3x.png`
+   **Important:** You must include the default icon files. Example files:
+   - `default@2x.png` (required - for default/primary icon)
+   - `default@3x.png` (required - for default/primary icon)
+   - `dark@2x.png` (for alternate icon)
+   - `dark@3x.png` (for alternate icon)
+   - `light@2x.png` (for alternate icon)
+   - `light@3x.png` (for alternate icon)
 
 4. Ensure the icon names in your files match the keys used in `Info.plist` (e.g., if you use `"dark"` in Info.plist, name your files `dark@2x.png` and `dark@3x.png`)
 
