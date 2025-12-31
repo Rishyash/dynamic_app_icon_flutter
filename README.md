@@ -104,7 +104,7 @@ Get a list of all available alternate icon names that can be used.
 ```dart
 List<String> availableIcons = await DynamicAppIconFlutterPlus.getAvailableIcons();
 print('Available icons: $availableIcons');
-// Output: Available icons: [dark, light, holiday, summer]
+// Output: Available icons: [dark, light]
 ```
 
 **Platform Behavior:**
@@ -246,7 +246,7 @@ For each alternate icon, create icon files in all density folders. You must prov
    ```
 
 **Important:** 
-- Replace `{iconName}` with your actual icon name (e.g., `dark`, `light`, `holiday`)
+- Replace `{iconName}` with your actual icon name (e.g., `dark`, `light`)
 - The icon name in the filename must match the name used in the `activity-alias` in `AndroidManifest.xml`
 - Ensure all density variants are provided for each icon
 - The default icon (`ic_launcher.png`) is required and should be present in all density folders
