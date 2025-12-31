@@ -211,6 +211,8 @@ Add activity aliases for each alternate icon. The plugin automatically discovers
 
 For each alternate icon, create icon files in all density folders. You must provide icons for all density variants:
 
+![Android Icon Folder Structure](assets/images/android-icon-structure.png)
+
 1. Navigate to your Android app's `res` directory (e.g., `android/app/src/main/res/`)
 
 2. For each alternate icon, create icon files in all density folders:
