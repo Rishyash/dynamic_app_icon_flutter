@@ -334,6 +334,8 @@ Add alternate icons configuration to your `Info.plist`. **Important:** You must 
 
 #### Add Icon Assets
 
+![iOS App Icon Folder Structure](assets/images/ios-icon-structure.png)
+
 1. Open your project in Xcode
 2. Create an `App Icon` folder in your `Runner` directory (e.g., `ios/Runner/App Icon/`)
 3. Add icon image files for each icon (including the **required** default icon) with the following naming convention:
