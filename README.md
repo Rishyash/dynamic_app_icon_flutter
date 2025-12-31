@@ -219,8 +219,6 @@ For each alternate icon, create icon files in all density folders:
 
 **Note:** Replace `dark` with your icon name and ensure all density variants are provided.
 
-For detailed Android setup instructions, see [README_ANDROID.md](README_ANDROID.md).
-
 ---
 
 ### iOS Setup
@@ -230,33 +228,79 @@ For detailed Android setup instructions, see [README_ANDROID.md](README_ANDROID.
 Add alternate icons configuration to your `Info.plist`:
 
 ```xml
-<key>CFBundleIcons</key>
+	<key>CFBundleIcons</key>
 <dict>
-    <key>CFBundleAlternateIcons</key>
-    <dict>
-        <key>dark</key>
-        <dict>
-            <key>CFBundleIconFiles</key>
-            <array>
-                <string>AppIcon-Dark</string>
-            </array>
-        </dict>
-        <key>light</key>
-        <dict>
-            <key>CFBundleIconFiles</key>
-            <array>
-                <string>light</string>
-            </array>
-        </dict>
-    </dict>
+<key>CFBundleAlternateIcons</key>
+<dict>
+  <key>dark</key>
+  <dict>
+    <key>CFBundleIconFiles</key>
+    <array>
+      <string>dark</string>
+    </array>
+    <key>UIPrerenderedIcon</key>
+    <false/>
+  </dict>
+  <key>light</key>
+  <dict>
+    <key>CFBundleIconFiles</key>
+    <array>
+      <string>light</string>
+    </array>
+    <key>UIPrerenderedIcon</key>
+    <false/>
+  </dict>
+</dict>
+<key>CFBundlePrimaryIcon</key>
+<dict>
+  <key>CFBundleIconFiles</key>
+  <array>
+    <string>default</string>
+  </array>
+  <key>UIPrerenderedIcon</key>
+  <false/>
+</dict>
+</dict>
+<key>CFBundleIcons~ipad</key>
+<dict>
+<key>CFBundleAlternateIcons</key>
+<dict>
+  <key>dark</key>
+  <dict>
+    <key>CFBundleIconFiles</key>
+    <array>
+      <string>dark</string>
+    </array>
+    <key>UIPrerenderedIcon</key>
+    <false/>
+  </dict>
+  <key>light</key>
+  <dict>
+    <key>CFBundleIconFiles</key>
+    <array>
+      <string>light</string>
+    </array>
+    <key>UIPrerenderedIcon</key>
+    <false/>
+  </dict>
+</dict>
+<key>CFBundlePrimaryIcon</key>
+<dict>
+  <key>CFBundleIconFiles</key>
+  <array>
+    <string>default</string>
+  </array>
+  <key>UIPrerenderedIcon</key>
+  <false/>
+</dict>
 </dict>
 ```
 
 #### Add Icon Assets
 
 1. Open your project in Xcode
-2. Add icon images to `Assets.xcassets`
-3. Create new icon sets (e.g., `AppIcon-Dark`, `AppIcon-Light`)
+2. Add icon images to new folder `Assets.xcassets`
+3. Create new icon sets (e.g., `dark`, `light`)
 4. Add all required icon sizes for each set
 
 **Requirements:**
