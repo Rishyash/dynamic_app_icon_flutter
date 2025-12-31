@@ -1,3 +1,6 @@
+## 0.0.8
+* Readme
+
 ## 0.0.7
 * Package fix
 
