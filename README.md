@@ -299,13 +299,26 @@ Add alternate icons configuration to your `Info.plist`:
 #### Add Icon Assets
 
 1. Open your project in Xcode
-2. Add icon images to new folder `Assets.xcassets`
-3. Create new icon sets (e.g., `dark`, `light`)
-4. Add all required icon sizes for each set
+2. Create an `App Icon` folder in your `Runner` directory (e.g., `ios/Runner/App Icon/`)
+3. Add icon image files for each alternate icon with the following naming convention:
+   - For each icon name (e.g., `dark`, `light`, `default`), add:
+     - `{iconName}@2x.png` (120x120 pixels for iPhone)
+     - `{iconName}@3x.png` (180x180 pixels for iPhone)
+   
+   Example files:
+   - `dark@2x.png`
+   - `dark@3x.png`
+   - `light@2x.png`
+   - `light@3x.png`
+   - `default@2x.png`
+   - `default@3x.png`
+
+4. Ensure the icon names in your files match the keys used in `Info.plist` (e.g., if you use `"dark"` in Info.plist, name your files `dark@2x.png` and `dark@3x.png`)
 
 **Requirements:**
 - iOS 10.3 or later
-- All icon sizes must be provided for each alternate icon
+- Icon files must be placed in the `App Icon` folder within your Runner directory
+- Provide both @2x and @3x versions for each alternate icon
 
 ---
 
