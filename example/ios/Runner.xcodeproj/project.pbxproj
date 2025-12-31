@@ -68,7 +68,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E4D646442F04D21D00710ACC /* App Icon */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "App Icon"; sourceTree = "<group>"; };
+		E4766AD02F04DA0C009363BF /* App Icon */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "App Icon"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
-				E4D646442F04D21D00710ACC /* App Icon */,
+				E4766AD02F04DA0C009363BF /* App Icon */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -209,7 +209,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				E4D646442F04D21D00710ACC /* App Icon */,
+				E4766AD02F04DA0C009363BF /* App Icon */,
 			);
 			name = Runner;
 			productName = Runner;

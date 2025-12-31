@@ -353,6 +353,20 @@ Add alternate icons configuration to your `Info.plist`. **Important:** You must 
 
 4. Ensure the icon names in your files match the keys used in `Info.plist` (e.g., if you use `"dark"` in Info.plist, name your files `dark@2x.png` and `dark@3x.png`)
 
+5. Open `Runner.xcworkspace` in Xcode (not `Runner.xcodeproj`)
+
+6. Right-click on `Runner` in the project navigator and select **"Add Files to 'Runner'"**
+
+   ![Add Files to Runner](assets/images/ios-add-files-to-runner.png)
+
+7. Select the `App Icon` folder you created in step 2
+
+   ![Select App Icon Folder](assets/images/ios-select-app-icon-folder.png)
+
+8. In the dialog that appears, select **"Create folder references"** (not "Create groups") and click **"Add"**
+
+   ![Create Folder References](assets/images/ios-create-folder-references.png)
+
 **Requirements:**
 - iOS 10.3 or later
 - Icon files must be placed in the `App Icon` folder within your Runner directory
