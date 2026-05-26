@@ -1,3 +1,7 @@
+## 1.0.0
+* Added Swift Package Manager (SPM) support for iOS — resolves Flutter SPM compatibility warning
+* CocoaPods support retained for full backwards compatibility
+
 ## 0.0.8
 * Readme
 

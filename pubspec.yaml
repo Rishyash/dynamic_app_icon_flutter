@@ -1,6 +1,6 @@
 name: dynamic_app_icon_flutter_plus
 description: "Dynamic App Icon for Flutter enables Flutter apps to change their launcher icon at runtime, ideal for branding updates, seasonal themes, and feature-based icon switching."
-version: 0.0.8
+version: 1.0.0
 repository: https://github.com/Rishyash/dynamic_app_icon_flutter.git
 license: MIT
 
@@ -50,6 +50,7 @@ flutter:
         pluginClass: DynamicAppIconFlutterPlusPlugin
       ios:
         pluginClass: DynamicAppIconFlutterPlusPlugin
+        sharedDarwinSource: false
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
