@@ -1,3 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.application.dynamic_app_icon_flutter_plus">
+  <application>
+    <!-- stopWithTask=false is required: we want onTaskRemoved to fire when the user swipes
+         the app from recents, which is when the deferred icon swap runs. -->
+    <service
+      android:name=".DynamicAppIconService"
+      android:exported="false"
+      android:stopWithTask="false" />
+  </application>
 </manifest>

@@ -50,4 +50,15 @@ class DynamicAppIconFlutterPlus {
       'showAlert': showAlert,
     });
   }
+
+  /// Android-only: immediately apply the pending icon (if any) queued by
+  /// [setAlternateIconName]. Intended to be called when the app moves to
+  /// background — applying the swap while MainActivity is no longer the
+  /// foreground activity avoids the launcher kick-to-home that some OEMs
+  /// trigger on `PACKAGE_CHANGED`. Safe to call when there is no pending.
+  ///
+  /// On iOS this is a no-op (iOS applies the swap synchronously).
+  static Future<void> applyPendingIcon() async {
+    await _channel.invokeMethod('mApplyPendingIcon');
+  }
 }

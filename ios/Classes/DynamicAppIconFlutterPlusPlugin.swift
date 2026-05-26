@@ -59,6 +59,9 @@ import UIKit
       } else {
         result(FlutterError(code: "UNAVAILABLE", message: "Not supported on iOS ver < 10.3", details: nil))
       }
+    } else if call.method == "mApplyPendingIcon" {
+      // No-op on iOS: setAlternateIconName already applies synchronously, there is no pending state.
+      result(nil)
     } else if call.method == "mGetAvailableIcons" {
       if #available(iOS 10.3, *) {
         var availableIcons: [String] = []
